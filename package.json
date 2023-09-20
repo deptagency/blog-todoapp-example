@@ -1,5 +1,12 @@
 {
   "private": true,
+  "author": {
+    "name": "Caleb White - Dept Agency",
+    "email": "caleb.white@deptagency.com",
+    "url": "https://deptagency.com"
+  },
+  "license": "MIT",
+  "description": "A basic todo application used to demonstrate the power of Redwoodjs" ,
   "workspaces": {
     "packages": [
       "api",
@@ -7,7 +14,8 @@
     ]
   },
   "devDependencies": {
-    "@redwoodjs/core": "6.2.1"
+    "@redwoodjs/core": "6.2.1",
+    "prettier-plugin-tailwindcss": "0.4.1"
   },
   "eslintConfig": {
     "extends": "@redwoodjs/eslint-config",

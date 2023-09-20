@@ -7,11 +7,19 @@
 // 'src/pages/HomePage/HomePage.js'         -> HomePage
 // 'src/pages/Admin/BooksPage/BooksPage.js' -> AdminBooksPage
 
-import { Router, Route } from '@redwoodjs/router'
+import { Set, Router, Route } from '@redwoodjs/router'
+
+import ScaffoldLayout from 'src/layouts/ScaffoldLayout'
 
 const Routes = () => {
   return (
     <Router>
+      <Set wrap={ScaffoldLayout} title="Todos" titleTo="todos" buttonLabel="New Todo" buttonTo="newTodo">
+        <Route path="/new" page={TodoNewTodoPage} name="newTodo" />
+        <Route path="/{id:Int}/edit" page={TodoEditTodoPage} name="editTodo" />
+        <Route path="/{id:Int}" page={TodoTodoPage} name="todo" />
+        <Route path="/" page={TodoTodosPage} name="todos" />
+      </Set>
       <Route notfound page={NotFoundPage} />
     </Router>
   )

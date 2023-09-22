@@ -115,6 +115,12 @@ const TodosList = ({ todos }: FindTodos) => {
                   </td>
                 </tr>
               )
+            } else {
+              return (
+                <tr key="notodos" className="w-full text-center">
+                  No todos. Please add a todo to create a list!
+                </tr>
+              )
             }
           })}
         </tbody>
